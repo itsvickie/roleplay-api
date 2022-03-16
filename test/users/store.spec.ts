@@ -1,10 +1,10 @@
-import User from 'App/Models/User'
 import test from 'japa'
 import supertest from 'supertest'
 import Database from '@ioc:Adonis/Lucid/Database'
 
 import { CreateUser } from 'App/Utils/Interfaces/UserInterface'
 import { UserFactory } from 'Database/factories/User'
+import User from 'App/Models/User'
 
 const BASE_URL = `http://${process.env.HOST}:${process.env.PORT}/v1`
 
@@ -36,6 +36,8 @@ test.group('Create a new user', (group) => {
       assert.equal(verifyUser.email, userBody.email)
       assert.equal(verifyUser.avatar, userBody.avatar)
       assert.equal(verifyUser.username, userBody.username)
+      assert.isFalse(verifyUser.status)
+      assert.isString(verifyUser.confirmCode)
     }
   })
 
