@@ -12,4 +12,12 @@ export default class ProfileController {
 
     return response.created()
   }
+
+  public async confirmAccount({ request, response }: HttpContextContract) {
+    const { code } = request.qs()
+
+    const { status } = await UserRepository.confirmAccount(code)
+
+    return response.status(status)
+  }
 }
