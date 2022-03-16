@@ -18,6 +18,12 @@ export default class User extends BaseModel {
   @column()
   public avatar: string | null
 
+  @column()
+  public status: boolean 
+
+  @column()
+  public confirmCode: string
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 
