@@ -1,0 +1,4 @@
+export enum CustomExceptionCodes {
+  E_DESACTIVED_USER = 'E_DESACTIVED_USER',
+  E_INVALID_CREDENTIALS = 'E_INVALID_CREDENTIALS',
+}
