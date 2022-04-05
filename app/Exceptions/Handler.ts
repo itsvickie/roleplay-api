@@ -20,5 +20,7 @@ export default class ExceptionHandler extends HttpExceptionHandler {
         .status(401)
         .send({ error: { message: 'Credenciais inválidas' } })
     }
+
+    return super.handle(error, ctx)
   }
 }
