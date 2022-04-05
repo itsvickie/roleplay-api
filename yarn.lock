@@ -52,6 +52,15 @@
     picomatch "^2.3.1"
     slash "^3.0.0"
 
+"@adonisjs/auth@^8.0.12":
+  version "8.0.12"
+  resolved "https://registry.yarnpkg.com/@adonisjs/auth/-/auth-8.0.12.tgz#7d2bb9f043cc4d8a4788cc4107a7c7479d28c25c"
+  integrity sha512-LoNsg+z289hlxBbzQJTA68cIhMLV5N4ty64A40Yly6+tDo51+n4Q/sqHpAj9OKZHlGbMK5fP3DRgLdRl/Uli+w==
+  dependencies:
+    "@poppinss/hooks" "^5.0.2"
+    "@poppinss/utils" "^4.0.2"
+    luxon "^2.3.1"
+
 "@adonisjs/bodyparser@^8.1.0":
   version "8.1.0"
   resolved "https://registry.npmjs.org/@adonisjs/bodyparser/-/bodyparser-8.1.0.tgz"
@@ -230,6 +239,15 @@
   dependencies:
     "@poppinss/utils" "^4.0.2"
     jest-worker "^27.5.1"
+
+"@adonisjs/redis@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@adonisjs/redis/-/redis-7.1.1.tgz#41c55cc6a7cb205963d77271de27cb6592797074"
+  integrity sha512-8NA8XQVDzM2RPcrVQTVYKxzhT0V9IMRZG2xeybn+KxnTI9ZRlRZPoi69m3frEbuQtRA+Xxmd3JzlFxWPH7xBwA==
+  dependencies:
+    "@poppinss/utils" "^4.0.2"
+    "@types/ioredis" "^4.28.8"
+    ioredis "^4.28.5"
 
 "@adonisjs/repl@^3.1.0":
   version "3.1.9"
@@ -605,6 +623,13 @@
   version "4.28.8"
   resolved "https://registry.yarnpkg.com/@types/ioredis/-/ioredis-4.28.8.tgz#a181d6eb70e402a6db670fe54b9c5bb66c0fac17"
   integrity sha512-mULOyO2smtvkE1zmzRRA4P0+1UjEqusi014kXOL1q3CY0RgqkR5/wKvv+vAJbPw2Q66wPyylKeevUy+m/FaRMg==
+  dependencies:
+    "@types/node" "*"
+
+"@types/ioredis@^4.28.8":
+  version "4.28.10"
+  resolved "https://registry.yarnpkg.com/@types/ioredis/-/ioredis-4.28.10.tgz#40ceb157a4141088d1394bb87c98ed09a75a06ff"
+  integrity sha512-69LyhUgrXdgcNDv7ogs1qXZomnfOEnSmrmMFqKgt1XMJxmoOSG/u3wYy13yACIfKuMJ8IhKgHafDO3sx19zVQQ==
   dependencies:
     "@types/node" "*"
 
