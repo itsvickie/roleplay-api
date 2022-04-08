@@ -33,4 +33,30 @@ test.group('Auth User', (group) => {
     assert.isDefined(body.user)
     assert.equal(body.user.id, user.id)
   })
+
+  test('It should fail if user not activated your account yet', async (assert) => {
+    await user.merge({ status: false }).save()
+
+    const { body } = await supertest(BASE_URL)
+      .post('/auth')
+      .send({
+        email: user.email,
+        password,
+      })
+      .expect(403)
+
+    assert.equal(body.error.message, 'Usuário desativado. Cheque seu e-mail para ativá-lo!')
+  })
+
+  test('It should fail if credentials are invalid', async (assert) => {
+    const { body } = await supertest(BASE_URL)
+      .post('/auth')
+      .send({
+        email: user.email,
+        password: 'invalid_password',
+      })
+      .expect(401)
+
+    assert.equal(body.error.message, 'Credenciais inválidas')
+  })
 })
