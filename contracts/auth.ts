@@ -9,8 +9,8 @@ declare module '@ioc:Adonis/Addons/Auth' {
   }
 
   interface GuardsList {
-    user: {
-      implementation: OATGuardContract<'user', 'user'>
+    user_guard: {
+      implementation: OATGuardContract<'user', 'user_guard'>
       config: OATGuardConfig<'user'>
     }
   }

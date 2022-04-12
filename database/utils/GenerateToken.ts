@@ -1,9 +1,11 @@
-import User from 'App/Models/User'
-import { UserFactory } from 'Database/factories/User'
 import supertest from 'supertest'
 
+import { UserFactory } from 'Database/factories/User'
+import { ReturnUserAuth } from 'App/Interfaces/AuthInterface'
+import User from 'App/Models/User'
+
 export default class GenerateToken {
-  public static async createOrFindUserAndToken(user?: User) {
+  public static async createOrFindUserAndToken(user?: User): Promise<ReturnUserAuth> {
     if (!user) user = await UserFactory.merge({ 
       password: 'User123', 
       status: true 

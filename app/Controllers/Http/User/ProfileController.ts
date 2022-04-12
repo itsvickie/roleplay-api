@@ -20,4 +20,9 @@ export default class ProfileController {
 
     return response.status(status)
   }
+
+  public async getProfile({ response, auth }: HttpContextContract) {
+    const user = await UserRepository.getProfile(auth)
+    return response.ok(user)
+  }
 }
