@@ -1,5 +1,6 @@
-import User from 'App/Models/User'
 import crypto from 'crypto'
+
+import User from 'App/Models/User'
 
 import { CreateUser } from 'App/Utils/Interfaces/UserInterface'
 import { MailQueue } from 'App/Services/Queue'

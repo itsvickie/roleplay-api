@@ -21,7 +21,7 @@ export default class User extends BaseModel {
   @column()
   public status: boolean 
 
-  @column()
+  @column({ serializeAs: null })
   public confirmCode: string
 
   @column.dateTime({ autoCreate: true })

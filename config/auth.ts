@@ -17,9 +17,9 @@ import { AuthConfig } from '@ioc:Adonis/Addons/Auth'
 |
 */
 const authConfig: AuthConfig = {
-  guard: 'user',
+  guard: 'user_guard',
   guards: {
-    user: {
+    user_guard: {
       driver: 'oat',
       tokenProvider: {
         type: 'api',

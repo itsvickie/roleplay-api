@@ -1,4 +1,5 @@
 import { Exception } from '@adonisjs/core/build/standalone'
+
 import { CustomExceptionCodes } from 'App/Exceptions/CustomExceptionCodes'
 import { CreateAuth } from 'App/Interfaces/AuthInterface'
 
